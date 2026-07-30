@@ -31,7 +31,7 @@ jobs:
 
       - name: Run CloudGuard scan (Terraform)
         run: |
-          cloudguard scan --path ./terraform --format sarif --output cloudguard-results.sarif
+          cloudguard scan --path examples/vulnerable --format sarif --output cloudguard-results.sarif
         continue-on-error: true   # don't block SARIF upload if issues are found
 
       - name: Upload SARIF to GitHub Security tab
@@ -41,4 +41,4 @@ jobs:
 
       - name: Fail build on critical/high findings
         run: |
-          cloudguard scan --path ./terraform --fail-on high
+          cloudguard scan --path examples/vulnerable --fail-on high
