@@ -81,11 +81,20 @@ Each scan produces a 0-100 score (and letter grade) based on severity-weighted f
 
 ## Demo fixtures
 
-- [`examples/vulnerable/`](examples/vulnerable) — deliberately misconfigured Terraform that triggers every rule (scores 0/F)
-- [`examples/secure/`](examples/secure) — the same infrastructure, properly configured (scores 100/A)
+- [`examples/vulnerable/`](examples/vulnerable) — deliberately misconfigured Terraform that triggers every rule
+- [`examples/secure/`](examples/secure) — the same infrastructure, properly configured
 
-This pair exists specifically to demonstrate the tool doesn't just detect issues — it doesn't cry wolf on clean infrastructure either. Run both and compare:
+This pair exists specifically to demonstrate the tool doesn't just detect issues — it doesn't cry wolf on clean infrastructure either.
 
+**Vulnerable config — 12 findings, Grade F:**
+
+![Vulnerable scan](screenshots/scan-vulnerable.png)
+
+**Same infra, properly secured — 0 findings, Grade A:**
+
+![Secure scan](screenshots/scan-secure.png)
+
+Run both yourself:
 ```bash
 cloudguard scan --path examples/vulnerable
 cloudguard scan --path examples/secure
