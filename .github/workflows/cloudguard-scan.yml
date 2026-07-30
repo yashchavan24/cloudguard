@@ -41,4 +41,5 @@ jobs:
 
       - name: Fail build on critical/high findings
         run: |
-          cloudguard scan --path examples/vulnerable --fail-on high
+          cloudguard scan --path examples/secure --fail-on high
+
