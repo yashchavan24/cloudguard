@@ -133,6 +133,6 @@ MIT
 
 ## Why this repo's CI shows "Failure"
 
-The GitHub Action in this repo intentionally fails on the examples/vulnerable Terraform config, because that config is *deliberately* misconfigured to demonstrate CloudGuard's detection rules. This is the correct, expected behavior of a real security CI gate — a pipeline should block a build when it finds critical-severity issues, exactly like it does here.
+The GitHub Action in this repo intentionally fails on the examples/vulnerable Terraform config, because that config is *deliberately* misconfigured to demonstrate CloudGuard's detection rules. This is the correct, expected behavior of a real security CI gate ï¿½ a pipeline should block a build when it finds critical-severity issues, exactly like it does here.
 
 See the [Security tab](../../security/code-scanning) for the full list of findings CloudGuard uploaded as SARIF.
